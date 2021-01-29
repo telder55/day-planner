@@ -21,14 +21,14 @@
   </header>
   <div class="container">
     <!-- Timeblocks go here -->
-    <div class="row hour">
-      <div class="col-sm-2">
+    <div class="row hour" id="9">
+      <div class="col-sm-2 row-height">
         <p>9:00 AM</p>
       </div>
-        <textarea class = "col-sm-8"></textarea>
+        <textarea class = "col-sm-8" name="" id="" cols="1" rows="2"></textarea>
         <button class="col-sm-2 saveBtn">Save</button>
-      
     </div>
+    
     
   </div>
 
@@ -37,15 +37,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- Linking custom script after moment library to have access in my script -->
   <script src="./assets/js/script.js"></script>
-  <script>
-
-    // Current Date + Time
-    let m = moment();
-
-
-    // Logging Current Time
-    console.log(`toString() ==> ${m.toString()}`);
-  </script>
+  
 </body>
 
 </html>
