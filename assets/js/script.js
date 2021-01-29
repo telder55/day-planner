@@ -4,7 +4,6 @@ Homework Notes
 - Need to use local storage for saving in text. 
 - Need to use Moment.JS to get the times. 
 */
-var eightAM = document.getElementById("8");
 var nineAM = document.getElementById("09");
 var tenAM = document.getElementById("10");
 var elevenAM = document.getElementById("11");
@@ -17,7 +16,7 @@ var fivePM = document.getElementById("17");
 
 
 // Array for time block hours
-var hourBlockArray = [eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM];
+var hourBlockArray = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM];
 
 function timeCheck() {
     // Getting Hour as a single number
