@@ -29,16 +29,23 @@ var textStoreArray = [];
 console.log(textStoreArray);
 
 // Get text from local storage 
-
 if (localStorage.getItem("Planner Entry")) {
     textStoreArray = JSON.parse(localStorage.getItem("Planner Entry"))
+} else {
+    textStoreArray[0] = {
+        Nine: ""
+    };
+
 };
 
 console.log(textStoreArray);
 
 // Add 9am text to text area
 var nineText = document.getElementById("9-text");
-nineText.textContent = textStoreArray[0].Nine;
+for (let i = 0; i < textStoreArray.length; i++) {
+    nineText.textContent = textStoreArray[i].Nine;
+    
+}
 
 // Function to get 9am text 
 function getNineText(event) {
@@ -55,6 +62,7 @@ function store9Text(text) {
         Nine: text
     };
     
+    // change to 
     textStoreArray.push(nineStore);
     // Stringify Text Store Array
     localStorage.setItem("Planner Entry", JSON.stringify(textStoreArray));
