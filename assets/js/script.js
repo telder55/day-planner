@@ -44,16 +44,16 @@ for (let i = 0; i < textStoreArray.length; i++) {
     var hourContent = textStoreArray[i].BlockText;
     console.log(hourNumber);
     console.log(hourContent);
-    $("#" + hourNumber).val(hourContent)
+    $("#" + hourNumber).val(hourContent);
 }
     
 
 
 // Add 9am text to text area
-var nineText = document.getElementById("9-text");
-for (let i = 0; i < textStoreArray.length; i++) {
-    nineText.textContent = textStoreArray[i].Nine;
-}
+// var nineText = document.getElementById("9-text");
+// for (let i = 0; i < textStoreArray.length; i++) {
+//     nineText.textContent = textStoreArray[i].Nine;
+// }
 
 // Function to get 9am text 
 // function getNineText(event) {
