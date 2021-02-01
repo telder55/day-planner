@@ -47,22 +47,6 @@ for (let i = 0; i < textStoreArray.length; i++) {
     $("#" + hourNumber).val(hourContent);
 }
     
-
-
-// Add 9am text to text area
-// var nineText = document.getElementById("9-text");
-// for (let i = 0; i < textStoreArray.length; i++) {
-//     nineText.textContent = textStoreArray[i].Nine;
-// }
-
-// Function to get 9am text 
-// function getNineText(event) {
-//     event.preventDefault();
-//     var nineTextValue = document.getElementById("9-text").value;
-//     console.log(nineTextValue)
-//     store9Text(nineTextValue);
-// }
-
 // Step 2 Function to get text from text area of parent block that was clicked on. 
 function getBlockText() {
     var closestBlockID = $(this).siblings('textarea').attr('id');
@@ -81,21 +65,6 @@ function storeBlockText(hour, text) {
     textStoreArray.push(blockStore)
     localStorage.setItem("Block Entry", JSON.stringify(textStoreArray))
 }
-
-// Store 9am text to local storage
-// function store9Text(text) {
-//     var nineStore = {
-//         Nine: text
-//     };
-    
-//     // change to 
-//     textStoreArray.push(nineStore);
-//     // Stringify Text Store Array
-//     localStorage.setItem("Planner Entry", JSON.stringify(textStoreArray));
-// }
-
-// Event Listener for 9AM Save Button
-// saveNine.addEventListener("click", getNineText);
 
 // Step 1 Event Listener for any save button. Replacing previous event listener. 
 $(document).on("click", ".saveBtn", getBlockText);
